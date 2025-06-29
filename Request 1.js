@@ -1644,7 +1644,7 @@ var directions = {
 };
 
 setTimeout(function() {
-    g.bfs(gwc.gmcp.data.room.id, "j6ZW70")
+    g.bfs(window.startRoom, "j6ZW70")
 }, 500);
 
 function deliver() {
