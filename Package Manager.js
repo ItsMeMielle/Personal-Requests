@@ -1,6 +1,6 @@
 window.foundTriggers = [];
 window.foundAliases = [];
-if ($("#input").val() !== "package create" && $("#input").val !== "package download") $("#mudoutput").append("<div class="line hanging-indent">Syntax is \<package create/download\></div>");
+if ($("#input").val() !== "package create" && $("#input").val !== "package download") $("#mudoutput").append("<div class=\"line hanging-indent\">Syntax is \"package create/download\"</div>");
 if ($("#input").val() === "package create") createPopup();
 if ($("#input").val() === "package download") {
     let inputElement = document.createElement("input");
