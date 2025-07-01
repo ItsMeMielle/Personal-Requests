@@ -212,8 +212,8 @@ function handlePackageUpload(event) {
 }
  
 function processDownloadedPackage(packageData) {
-    $("#mudoutput").append(`<div class="line hanging-indent">Triggers unpacked: ${(packageData.triggers.length ? packageData.triggers.map(t => t.name).join(", ") : "None"}</div>`);
-    $("#mudoutput").append(`<div class="line hanging-indent">Aliases unpacked: ${(packageData.aliases.length ? packageData.aliases.map(a => a.value).join(", ") : "None"}</div>`);
+    $("#mudoutput").append(`<div class="line hanging-indent">Triggers unpacked: ${(packageData.triggers.length ? packageData.triggers.map(t => t.name).join(", ") : "None")}</div>`);
+    $("#mudoutput").append(`<div class="line hanging-indent">Aliases unpacked: ${(packageData.aliases.length ? packageData.aliases.map(a => a.value).join(", ") : "None")}</div>`);
     uploadData(packageData.triggers, "triggers").then(() => {
         uploadData(packageData.aliases, "aliases");
     });
