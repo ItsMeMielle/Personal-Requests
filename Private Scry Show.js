@@ -33,7 +33,7 @@ function fetchPartnerView(partnerId = window.partnerName) {
       mapPreview.style.marginTop = "4px";
       mapPreview.style.border = "1px dashed #ffffff";
       mapPreview.style.padding = "4px";
-      mapPreview.style.width = "100%";
+      mapPreview.style.width = "calc(100% - 10px)";
       mapPreview.style.background = "#000000";
 
       // Add everything to mudoutput
