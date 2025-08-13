@@ -1,15 +1,3 @@
-window.foundTriggers = [];
-window.foundAliases = [];
-if ($("#input").val() !== "package create" && $("#input").val !== "package download") $("#mudoutput").append("<div class=\"line hanging-indent\">Syntax is \"package create/download\"</div>");
-if ($("#input").val() === "package create") createPopup();
-if ($("#input").val() === "package download") {
-    let inputElement = document.createElement("input");
-    inputElement.setAttribute("type", "file");
-    inputElement.setAttribute("accept", "application/json");
-    inputElement.addEventListener("change", handlePackageUpload);
-    inputElement.click();
-}
- 
 function createPopup() {
     if (document.getElementById("popup")) document.getElementById("popup").remove();
     const popup = Object.assign(document.createElement("div"), {
@@ -260,4 +248,16 @@ async function handleData(data, type) {
     });
     $("button:contains('Save')").click();
     if (!data.enabled) $("button:contains('Disable')").click();
+}
+
+window.foundTriggers = [];
+window.foundAliases = [];
+if ($("#input").val() !== "package create" && $("#input").val !== "package download") $("#mudoutput").append("<div class=\"line hanging-indent\">Syntax is \"package create/download\"</div>");
+if ($("#input").val() === "package create") createPopup();
+if ($("#input").val() === "package download") {
+    let inputElement = document.createElement("input");
+    inputElement.setAttribute("type", "file");
+    inputElement.setAttribute("accept", "application/json");
+    inputElement.addEventListener("change", handlePackageUpload);
+    inputElement.click();
 }
